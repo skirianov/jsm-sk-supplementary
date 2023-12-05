@@ -5,7 +5,7 @@ export default async function JobPage({ params }: { params: { id: string } }) {
     method: "GET",
     headers: {
       'Authorization': 'Bearer ' + process.env.NEXT_PUBLIC_RECROOIT_API
-    }
+    },
   })
 
   const jobBoard: JobBoard = await response.json();
@@ -25,7 +25,7 @@ export default async function JobPage({ params }: { params: { id: string } }) {
           </div>
           <div className="flex flex-col items-center gap-2">
             <span className="text-gray-400">Location</span>
-            <span className="font-semibold">{job?.city || job?.country === "FREE" ? "Anywhere" : job?.country}</span>
+            <span className="font-semibold">{job?.country === "FREE" ? "Anywhere" : job?.country}</span>
           </div>
           <div className="flex flex-col items-center gap-2">
             <span className="text-gray-400">Annual gross salary range</span>

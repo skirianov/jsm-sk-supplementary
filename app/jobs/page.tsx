@@ -7,13 +7,14 @@ export default async function JobsPage() {
     method: "GET",
     headers: {
       'Authorization': 'Bearer ' + process.env.NEXT_PUBLIC_RECROOIT_API
-    }
+    },
+    cache: "no-store"
   })
 
   const jobBoard: JobBoard = await response.json();
   const { positions, affiliateId } = jobBoard;
 
-  console.log(affiliateId)
+  console.log(positions)
 
   return (
     <section>
