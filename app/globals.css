@@ -1,3 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.job-description div p {
+  margin-bottom: 1.2rem;
+}
+
+.job-description div ul {
+  list-style-type: none;
+}
+
+.job-description div p strong {
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+.job-description div ul p strong {
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.job-description div h1 {
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+}
+
+.job-description div ul li {
+  padding-left: 1.2rem;
+}
