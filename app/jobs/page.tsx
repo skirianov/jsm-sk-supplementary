@@ -8,7 +8,9 @@ export default async function JobsPage() {
     headers: {
       'Authorization': 'Bearer ' + process.env.NEXT_PUBLIC_RECROOIT_API
     },
-    cache: "no-store"
+    next: {
+      revalidate: 3600,
+    }
   })
 
   const jobBoard: JobBoard = await response.json();
